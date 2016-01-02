@@ -36,6 +36,10 @@ Rails.application.configure do
   # Raises helpful error messages.
   config.assets.raise_runtime_errors = true
 
+  # To enable sprockets_better_errors
+  # add this line to your `config/environments/development.rb:
+  config.assets.raise_production_errors = true
+
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
 end
