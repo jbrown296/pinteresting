@@ -38,8 +38,14 @@ Rails.application.configure do
 
   # To enable sprockets_better_errors
   # add this line to your `config/environments/development.rb:
-  config.assets.raise_production_errors = true
+  # config.assets.raise_production_errors = true
 
   # Raises error for missing translations
   # config.action_view.raise_on_missing_translations = true
+
+  # This is the added line needed from Devise and required for Heroku
+  #  = { host: 'localhost', port: 3000 }
+  # for development use localhost buy in production :host should be actual host
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
 end
